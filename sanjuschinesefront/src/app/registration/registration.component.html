@@ -1,0 +1,81 @@
+
+<div class="reg" style="padding: 20px; background: url('bg2.jpg') no-repeat center center/cover; 
+            
+             ">
+<div class="  card container col-sm-6" style="padding: 20px; ">
+  
+  <form class="col" (ngSubmit)="submitdata()" >
+   <h1 class="display-4">Register Here</h1>
+    <!-- Name -->
+    <div class="mb-3">
+      <label for="nameInput" class="form-label">Name</label>
+      <input type="text" name="name" class="form-control" id="nameInput"
+             [(ngModel)]="reg.name" required pattern="[a-zA-Z]">
+    </div>
+
+    <!-- Age -->
+    <div class="mb-3">
+      <label for="ageInput" class="form-label">Age</label>
+      <input type="number" name="age" class="form-control" id="ageInput"
+             [(ngModel)]="reg.age" required>
+    </div>
+
+    <!-- Gender -->
+    <div class="mb-3">
+      <label class="form-label">Gender</label><br>
+      <label class="me-3">
+        <input type="radio" name="gender" value="Male" [(ngModel)]="reg.gender"> Male
+      </label>
+      <label class="me-3">
+        <input type="radio" name="gender" value="Female" [(ngModel)]="reg.gender"> Female
+      </label>
+      <label>
+        <input type="radio" name="gender" value="Other" [(ngModel)]="reg.gender"> Other
+      </label>
+    </div>
+
+    <!-- Contact -->
+    <div class="mb-3">
+      <label for="contactInput" class="form-label">Contact</label>
+      <input type="tel" name="contact" class="form-control" id="contactInput"
+             [(ngModel)]="reg.contact" required>
+    </div>
+
+    <!-- Address -->
+    <div class="mb-3">
+      <label for="addressInput" class="form-label">Address</label>
+      <input type="text" name="address" class="form-control" id="addressInput"
+             [(ngModel)]="reg.address" required>
+    </div>
+
+    <!-- City -->
+    <div class="mb-3">
+      <label for="cityInput" class="form-label">City</label>
+      <select class="form-control" id="cityInput" name="city"
+              [(ngModel)]="reg.city" required>
+        <option value="">--select--</option>
+        <option>Satara</option>
+        <option>Pune</option>
+        <option>Kolhapur</option>
+        <option>Mumbai</option>
+      </select>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <label for="emailInput" class="form-label">Email</label>
+      <input type="email" name="emailid" class="form-control" id="emailInput"
+             [(ngModel)]="reg.emailid" required>
+    </div>
+
+    <!-- Password -->
+    <div class="mb-3">
+      <label for="passwordInput" class="form-label">Password</label>
+      <input type="password" name="password" class="form-control" id="passwordInput"
+             [(ngModel)]="reg.password" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>

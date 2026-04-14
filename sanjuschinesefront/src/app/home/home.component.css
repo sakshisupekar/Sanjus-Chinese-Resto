@@ -1,0 +1,149 @@
+
+:host {
+  display: block;
+}
+
+/* Section background + spacing */
+.hero {
+  background: #fff;
+  padding: 3rem 1rem;
+  scroll-margin :none;
+}
+
+/* Max width container */
+.hero__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Left content */
+.hero__content {
+  flex: 1 1 55%;
+}
+
+.hero__title {
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  color: #111;
+  margin: 0 0 1rem;
+}
+
+.highlight {
+  font-weight: 800;
+}
+.highlight--yellow {
+  color: #f5a524; /* Easy */
+}
+.highlight--orange {
+  color: #f59f0b; /* Tasty */
+}
+
+.hero__subtitle {
+  color: #6b7280; /* muted gray */
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  margin: 0 0 1.75rem;
+}
+
+/* CTA Button */
+.hero__btn {
+  border: none;
+  background: #f59f0b;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.9rem 1.4rem;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(245, 159, 11, 0.25);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+.hero__btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(245, 159, 11, 0.35);
+}
+.hero__btn:active {
+  transform: translateY(0);
+}
+
+/* Right image */
+.hero__imageWrap {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+.hero__image {
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 28px rgba(0,0,0,0.15));
+  transform: rotate(+10deg);
+  animation:alternate-reverse;
+}
+.hero__btn{
+  background-color: orange;
+}
+.hero__btn:hover{
+  background-color: orangered;
+  border-radius: 2pc;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+  .hero__inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero__imageWrap {
+    margin-bottom: 1rem;
+  }
+
+  
+}
+
+
+.footer-simple {
+  background-color: rgb(207, 209, 209);
+  padding: 15px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-simple__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.footer-simple p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer-simple__right a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  margin: 0 8px;
+  transition: 0.3s;
+}
+
+.footer-simple__right a:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+  .footer-simple__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}

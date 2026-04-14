@@ -1,0 +1,23 @@
+
+<div class="row justify-content-center"  style="background: url('bg2.jpg') no-repeat center center/cover; 
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center;">
+ 
+<form class="col-sm-6" (ngSubmit)="submitdata()" style="justify-content: center; margin-top: 5px;">
+  <h1 class="text-center display-4" > Admin Login </h1>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" name="emailid" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="adm.emailid">
+    
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" name="password" id="exampleInputPassword1" [(ngModel)]="adm.password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button><br>
+   
+</form>
+
+</div>

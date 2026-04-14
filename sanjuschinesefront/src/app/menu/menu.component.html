@@ -1,0 +1,13 @@
+
+<div class=" row" style="padding-top: 5px;">
+    <h1 class="text-center display-s">Our Menu</h1>
+    <div class="card" style="width: 18rem; padding: 20px;" *ngFor="let m of marr">
+        <img src="{{m.imagepath}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{m.name}}</h5>
+            <h4 class="card-title">{{m.description}}</h4>
+            <h3 class="card-title">{{m.price}}</h3>
+            <a  *ngIf="isLoggedIn"   class="btn btn-primary" (click)="order(m.name, m.price)">Order Now</a>
+        </div>
+    </div>
+</div>

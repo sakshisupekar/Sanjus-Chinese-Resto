@@ -1,0 +1,64 @@
+<div class="row justify-content-center" style="background: url('bg2.jpg') no-repeat center center; 
+            background-size: cover; 
+            border-radius: 12px; 
+            padding: 20px;
+            position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;">
+  <div class="  card  col-sm-7">
+    <h2 class="text-center mb-4">Place Your Order</h2>
+    <form (ngSubmit)="submitdata()">
+
+
+
+      <!-- Dish Name (Read Only) -->
+      <div class="mb-3">
+        <label for="dishName" class="form-label">Dish Name</label>
+        <input type="text" class="form-control" id="dishName" [(ngModel)]="mnm" name="dishName" readonly>
+      </div>
+
+
+
+      <!-- Quantity -->
+      <div class="mb-3">
+        <label>Quantity</label>
+        <input type="number" class="form-control" [(ngModel)]="o.quantity" name="quantity"
+          (ngModelChange)="Totalprice()">
+      </div>
+
+      <!-- Total Price -->
+      <div class="mb-3">
+        <label>Total Price</label>
+        <input type="number" class="form-control" [(ngModel)]="o.totalprice" name="totalprice" readonly>
+      </div>
+
+
+      <!-- Delivery Address -->
+      <div class="mb-3">
+        <label for="address" class="form-label">Delivery Address</label>
+        <textarea class="form-control" id="address" rows="3" [(ngModel)]="o.delivaryAddress"
+          name="delivaryAddress"></textarea>
+      </div>
+
+      <!-- Payment Method -->
+      <div class="mb-3">
+        <label class="form-label">Payment Method</label>
+        <select class="form-select" [(ngModel)]="o.paymentmethode" name="paymentmethode">
+          <option value="">-- Select Payment Method --</option>
+          <option value="COD">Cash on Delivery</option>
+          <option value="Card">Credit/Debit Card</option>
+          <option value="UPI">UPI</option>
+        </select>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary me-2">Confirm Order</button>
+      </div>
+
+
+    </form>
+  </div>
+</div>

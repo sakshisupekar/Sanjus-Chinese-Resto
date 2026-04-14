@@ -1,0 +1,23 @@
+<h1 class="text-center display-4">Orders</h1>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">rating</th>
+      <th scope="col">comments</th>
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor=" let o of oarr">
+      <td>{{o.id}}</td>
+      <td>{{o.userName}}</td>
+      <td>{{o.rating}}</td>
+      <td>{{o.comments}}</td>
+      
+    </tr>
+  </tbody>
+  
+</table>

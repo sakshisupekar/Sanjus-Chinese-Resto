@@ -1,0 +1,20 @@
+
+.feedback-section {
+  background: url('/bg2.jpg') no-repeat center center/cover;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star-rating {
+  font-size: 2rem;
+  color: #555;
+  cursor: pointer;
+}
+.star-rating .filled {
+  color: #ffd700;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+}
+

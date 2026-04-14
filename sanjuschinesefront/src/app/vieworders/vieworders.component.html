@@ -1,0 +1,29 @@
+<h1 class="text-center display-4">Orders</h1>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Email</th>
+      <th scope="col">dishName</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Total Price</th>
+      <th scope="col">DelivaryAddress</th>
+      <th scope="col">Paymentmethode</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor=" let o of oarr">
+      <td>{{o.orderid}}</td>
+      <td>{{o.emailid}}</td>
+      <td>{{o.dishName}}</td>
+      <td>{{o.quantity}}</td>
+      <td>{{o.totalprice}}</td>
+      <td>{{o.delivaryAddress}}</td>
+      <td>{{o.paymentmethode}}</td>
+      <td>{{o.status}}</td>
+      
+    </tr>
+  </tbody>
+  
+</table>

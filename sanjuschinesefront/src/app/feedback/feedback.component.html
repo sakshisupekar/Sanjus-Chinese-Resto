@@ -1,0 +1,38 @@
+<div class="feedback-section">
+
+    <div class="card shadow col-sm-6" style="padding: 20px; color: rgb(8, 8, 8); background-color: rgba(227, 228, 230, 0.644); margin-top: -15px;">
+      <h2 class="text-center mb-4">Give Your Feedback</h2>
+
+      <form (ngSubmit)="submitdata()" #feedbackForm="ngForm">
+
+        <!-- Username -->
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" id="username" class="form-control" [(ngModel)]="f.userName" name="username" required>
+        </div>
+
+        <!-- Rating -->
+        <div class="mb-3">
+          <label class="form-label">Rating</label>
+          <div class="star-rating">
+            <span *ngFor="let star of stars; let i = index" (click)="setRating(i+1)"
+              [class.filled]="i < f.rating">★</span>
+          </div>
+        </div>
+
+        <!-- Comment -->
+        <div class="mb-3">
+          <label for="comment" class="form-label">Comment</label>
+          <textarea id="comment" class="form-control" [(ngModel)]="f.comments" name="comment" rows="4"
+            required></textarea>
+        </div>
+
+        <!-- Submit -->
+        <div class="text-center" style="cursor: pointer; background-color: orangered; ">
+          <button type="submit" class="btn " [disabled]="!feedbackForm.form.valid" style="border: none;" >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,32 @@
+<div *ngIf="userOrders.length > 0; else noOrders">
+  <h1 class="text-center">My Orders</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Dish</th>
+        <th>Quantity</th>
+        <th>Total Price</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let o of userOrders">
+        <td>{{ o.dishName }}</td>
+        <td>{{ o.quantity }}</td>
+        <td>{{ o.totalprice }}</td>
+
+        <td>
+        <button *ngIf="o.status !== 'Cancelled'" (click)="cancelOrder(o.orderid)">
+          Cancel
+        </button>
+        <span *ngIf="o.status === 'Cancelled'">Cancelled</span>
+     
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noOrders>
+  <p class="text-center text-muted">You have not placed any orders yet.</p>
+</ng-template>
